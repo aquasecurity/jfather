@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/liamg/jfather"
+	"github.com/aquasecurity/jfather"
 )
 
 type ExampleParent struct {

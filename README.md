@@ -1,6 +1,6 @@
 # jfather
 
-[![build](https://github.com/liamg/jfather/actions/workflows/test.yml/badge.svg)](https://github.com/liamg/jfather/actions/workflows/test.yml)
+[![build](https://github.com/aquasecurity/jfather/actions/workflows/test.yml/badge.svg)](https://github.com/aquasecurity/jfather/actions/workflows/test.yml)
 
 Parse JSON with line numbers and more!
 
@@ -23,7 +23,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/liamg/jfather"
+	"github.com/aquasecurity/jfather"
 )
 
 type ExampleParent struct {

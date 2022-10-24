@@ -1,4 +1,4 @@
-module github.com/liamg/jfather
+module github.com/aquasecurity/jfather
 
 go 1.16
 
