@@ -15,6 +15,14 @@ func Test_String(t *testing.T) {
 	assert.Equal(t, "hello", output)
 }
 
+func Test_StringWithUnicode(t *testing.T) {
+	example := []byte(`"\u0440"`)
+	var output string
+	err := Unmarshal(example, &output)
+	require.NoError(t, err)
+	assert.Equal(t, "р", output)
+}
+
 func Test_StringToUninitialisedPointer(t *testing.T) {
 	example := []byte(`"hello"`)
 	var str *string

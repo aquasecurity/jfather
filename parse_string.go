@@ -1,6 +1,9 @@
 package jfather
 
-import "strconv"
+import (
+	"fmt"
+	"strconv"
+)
 
 var escapes = map[rune]string{
 	'\\': "\\",
@@ -43,7 +46,7 @@ func (p *parser) parseString() (Node, error) {
 				hex = append(hex, c)
 				if len(hex) == 4 {
 					inHex = false
-					char, err := strconv.Unquote("\\u" + string(hex))
+					char, err := strconv.Unquote(fmt.Sprintf("'\\u%s'", string(hex)))
 					if err != nil {
 						return nil, p.makeError("invalid unicode character '%s'", err)
 					}
